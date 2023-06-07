@@ -78,6 +78,11 @@ WSGI_APPLICATION = 'ChatApp.wsgi.application'
 #for long running configurations | for chat itself
 ASGI_APPLICATION = 'ChatApp.asgi.application'
 
+CHANNEL_LAYERS = {
+    'default':{
+        'BACKEND': 'channels.layers.InMemoryChannelLayer'
+    }
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
